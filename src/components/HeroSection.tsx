@@ -81,7 +81,7 @@ const HeroSection: React.FC = () => {
 
             {/* Right Side Statistics */}
             <div className="flex-1">
-              <StatisticsSection embedded={true} />
+              <StatisticsSection />
             </div>
           </div>
         </div>
