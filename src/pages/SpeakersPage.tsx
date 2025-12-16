@@ -229,14 +229,14 @@ const speakers = [
     name: "CUI, Tiejun",
     title: "southeast universitie china",
     company: "",
-    type:" Professor"
+    type:"Keynote"
   },
           {
     image: "WhatsApp Image 2025-12-12 at 2.24.58 AM.jpeg",
     name: "Katja Hose",
     title: "technical universty of vienna ,austria",
     company: "",
-    type:"Professor"
+    type:"Keynote"
   },
 
                   {
@@ -330,7 +330,7 @@ function SpeakersPage() {
               <h3 className="font-semibold">{speaker.name}</h3>
               <p className="text-sm text-gray-600">{speaker.title}</p>
               {/* <p className="text-xs text-gray-500">{speaker.company}</p> */}
-              <p className="text-sm text-gray-500 font-semibold">{speaker.type}</p>
+              <p className="text-sm text-[#292e63] font-semibold">{speaker.type}</p>
             </div>
           ))}
           <p className="text-sm text-[#2F2C7C] mt-4 col-span-full text-center">The speakers mentioned are not final and may be updated.</p>

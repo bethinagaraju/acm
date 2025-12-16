@@ -316,12 +316,12 @@ const EndFooter: React.FC = () => {
         {/* Opening Times */}
         <div>
           <h3 className="flex items-center gap-2 text-[#2e376d] font-semibold text-lg mb-4">
-            <FaCalendarAlt /> OPENING TIMES
+            <FaCalendarAlt /> CONFERENCE DATES
           </h3>
           <ul className="mb-4 space-y-2">
-            <li><strong>Wed 28 July 2026:</strong> 08:00 – 16:00</li>
-            <li><strong>Thu 29 July 2026:</strong> 08:30 – 16:00</li>
-            <li><strong>Fri 30 July 2026:</strong> 09:00 – 16:00</li>
+            <li><strong>Wed 28 July 2026</strong></li>
+            <li><strong>Thu 29 July 2026</strong></li>
+            <li><strong>Fri 30 July 2026</strong></li>
           </ul>
           <button
             className="bg-[#3f558d] text-white py-2 px-4"

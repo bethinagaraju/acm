@@ -60,6 +60,9 @@
 //               </div>
 //             )}
 //           </div>
+//           <Link to="/poster" className="tracking-wider hover:text-gray-300 text-sm">
+//             POSTER
+//           </Link>
 //           <Link to="/contact" className="tracking-wider hover:text-gray-300 text-sm">
 //             CONTACT
 //           </Link>
@@ -92,6 +95,9 @@
 //             <a href="/#highlets-section" className="block text-gray-800 font-semibold">
 //               MEDIA
 //             </a>
+//             <Link to="/poster" className="block text-gray-800 font-semibold">
+//               POSTER
+//             </Link>
 //             <a href="/contact" className="block text-gray-800 font-semibold">
 //               CONTACT US
 //             </a>
@@ -182,10 +188,23 @@ const BottomNavbar = ({ menuOpen }: { menuOpen: boolean }) => {
           </Link>
 
 
-<Link to="/call-for-papers" className="tracking-wider hover:text-gray-300 text-sm">
-            CALL FOR PAPERS
-          </Link>
-          {/* CALL FOR PAPERS DROPDOWN */}
+          <div
+            className="relative"
+            onMouseEnter={() => setHovered("papers")}
+            onMouseLeave={() => setHovered(null)}
+          >
+            <span className="tracking-wider hover:text-gray-300 text-sm cursor-pointer flex items-center">
+              CALL FOR PAPERS <ChevronDown size={16} />
+            </span>
+            {hovered === "papers" && (
+              <div className="absolute top-full left-0 bg-white text-black shadow-md rounded-md py-2 min-w-[220px] z-10">
+                <Link to="/call-for-papers" className="block px-4 py-2 hover:bg-gray-100">Paper Submission</Link>
+                {/* <Link to="/review-process" className="block px-4 py-2 hover:bg-gray-100">Review Process</Link>
+                <Link to="/publication-indexing" className="block px-4 py-2 hover:bg-gray-100">Publication & Indexing</Link> */}
+                <Link to="/poster" className="block px-4 py-2 hover:bg-gray-100">Poster</Link>
+              </div>
+            )}
+          </div>
     
 
           {/* PROGRAM DROPDOWN */}

@@ -799,7 +799,7 @@ function CallForPapersPage() {
   <h2 className="text-2xl font-bold mb-3">About the Call</h2>
 
   <p className="text-slate-600 leading-relaxed mb-4">
-    Welcome to the 2nd Edition of the Artificial Intelligence, Machine Learning & Robotics Conference (AIMLR 2026), taking place from July 28–30, 2026, in Rome, Italy — with hybrid (onsite + virtual) participation for global accessibility.
+    Welcome to the 3rd Edition of the Artificial Intelligence, Machine Learning & Robotics Conference (AIMLR 2026), taking place from July 28–30, 2026, in Rome, Italy — with hybrid (onsite + virtual) participation for global accessibility.
   </p>
 
   <p className="text-slate-600 leading-relaxed mb-4">
@@ -857,7 +857,7 @@ function CallForPapersPage() {
           </section>
 
           {/* Important Dates */}
-          <section>
+          {/* <section>
             <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
               <Calendar className="w-6 h-6 text-indigo-600" /> Important Dates
             </h2>
@@ -869,7 +869,49 @@ function CallForPapersPage() {
                 </div>
               ))}
             </div>
-          </section>
+          </section> */}
+
+<section className="w-full max-w-md">
+
+  <div className="overflow-hidden shadow-lg">
+    {/* Header */}
+    <div className="bg-[#0B3253] text-white text-center py-4 px-6 font-semibold">
+      Important Dates
+    </div>
+
+    {/* Dates list */}
+    <div className="bg-white p-4 sm:p-6">
+      <ul className="space-y-3">
+        {dates.map((d, i) => (
+          <li
+            key={i}
+            className="flex items-center justify-between gap-4 border border-gray-100 px-4 py-3"
+          >
+            <div className="text-left">
+              <p className={`text-sm ${i === 0 ? 'font-bold text-lg' : 'font-medium text-sm text-slate-800'}`}>
+                {d.event}
+              </p>
+            </div>
+            <div className="text-right">
+              <p className="text-sm font-medium text-slate-700">{d.date}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+
+  {/* Floating Back Button (mobile) */}
+  <button
+    aria-label="Back"
+    className="fixed left-4 top-1/2 -translate-y-1/2 bg-gray-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg md:hidden"
+  >
+    <span className="text-2xl">‹</span>
+  </button>
+
+</section>
+
+
 
           {/* Submission Guidelines */}
           {/* <section>
@@ -891,50 +933,86 @@ function CallForPapersPage() {
           </section> */}
 
           {/* Submission Guidelines */}
-<section>
-  <h2 className="text-2xl font-bold mb-6">Submission Guidelines</h2>
 
-  <div className="bg-white border rounded-2xl shadow-sm p-6 space-y-5">
+<section className="max-w-5xl mx-auto">
+  <h2 className="text-2xl font-bold mb-6 text-slate-900">
+    Submission Guidelines
+  </h2>
 
-    {guidelines.map((g, i) => {
-      const Icon = g.icon;
-      return (
-        <div
-          key={i}
-          className={`flex items-start gap-4 transition-all ${
-            g.highlight ? "bg-red-50 border border-red-200 p-4 rounded-xl" : ""
-          }`}
-        >
-          <div
-            className={`w-10 h-10 flex items-center justify-center rounded-xl shadow-sm ${
-              g.highlight
-                ? "bg-red-100 text-red-600"
-                : "bg-indigo-100 text-indigo-600"
-            }`}
-          >
-            <Icon className="w-5 h-5" />
-          </div>
+  <div className="overflow-x-auto bg-white border border-slate-200 shadow-sm">
+    <table className="w-full border-collapse">
+      <thead className="bg-[#0B3253]">
+        <tr>
+          <th className="px-5 py-4 text-left text-lg font-semibold text-white">
+             
+          </th>
+          <th className="px-5 py-4 text-left text-lg font-semibold text-white">
+            Category
+          </th>
+          <th className="px-5 py-4 text-left text-lg font-semibold text-white">
+            Guideline
+          </th>
+        </tr>
+      </thead>
 
-          <div>
-            <p className="font-semibold text-slate-900 text-[15px]">
-              {g.title}
-            </p>
-            <p className="text-slate-600 text-sm mt-1 leading-relaxed">
-              {g.text}
-            </p>
-          </div>
-        </div>
-      );
-    })}
+      <tbody>
+        {guidelines.map((g, i) => {
+          const Icon = g.icon;
+          return (
+            <tr
+              key={i}
+              className={`border-t transition
+                ${
+                  g.highlight
+                    ? "bg-red-50"
+                    : "hover:bg-slate-50"
+                }`}
+            >
+              {/* Index */}
+              <td className="px-5 py-4 text-sm text-slate-600">
+                {i + 1}
+              </td>
 
+              {/* Icon + Title */}
+              <td className="px-5 py-4">
+                <div className="flex items-center gap-3">
+                  <div
+                    className={`w-9 h-9 flex items-center justify-center rounded-lg
+                      ${
+                        g.highlight
+                          ? "bg-red-100 text-red-600"
+                          : "bg-indigo-100 text-indigo-600"
+                      }`}
+                  >
+                    <Icon className="w-4 h-4" />
+                  </div>
+                  <span className="font-medium text-slate-900 text-sm">
+                    {g.title}
+                  </span>
+                </div>
+              </td>
+
+              {/* Description */}
+              <td className="px-5 py-4 text-sm text-slate-600 leading-relaxed">
+                {g.text}
+              </td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
   </div>
 
   {/* Bottom Note */}
-  <p className="text-sm text-slate-500 mt-4 flex items-center gap-2 italic">
-    <Shield className="w-4 h-4 text-indigo-500" />  
-    All submissions will undergo a rigorous double-blind review process to ensure academic integrity and fairness.
-  </p>
+  <div className="mt-4 flex items-start gap-2 text-sm text-slate-500 italic">
+    <Shield className="w-4 h-4 text-indigo-500 mt-0.5" />
+    <p>
+      All submissions will undergo a rigorous double-blind review process to
+      ensure academic integrity and fairness.
+    </p>
+  </div>
 </section>
+
 
 
           {/* Double Blind Review */}

@@ -66,7 +66,7 @@ function HomePage() {
     <div className="min-h-screen bg-white">
       {/* <CookieConsent /> */}
       <Header />
-      <AnnouncementBar />
+      {/* <AnnouncementBar /> */}
     
       {/* <AnnouncementBar /> */}
       <HeroSection />

@@ -18,6 +18,7 @@ import SpeakersPage from './pages/SpeakersPage';
 import AboutPage from './pages/AboutPage';
 import CommitteePage from './pages/CommitteePage';
 import PastConferencesPage from './pages/PastConferencesPage';
+import Posterpage from './pages/Posterpage';
 import CallForPapersPage from './pages/CallForPapersPage';
 import ReviewProcessPage from './pages/ReviewProcessPage';
 import PublicationIndexingPage from './pages/PublicationIndexingPage';
@@ -80,6 +81,7 @@ function App() {
         <Route path='/Faq' element={<ScrollFaq />} />
         <Route path='/commitee' element={<ScrollCommiteePage />} />
         <Route path='/schedule' element={<ScrollSchedule />} />
+        <Route path='/poster' element={<Posterpage />} />
         
         
       </Routes>

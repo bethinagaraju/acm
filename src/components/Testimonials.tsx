@@ -96,48 +96,108 @@ interface Testimonial {
   message: string;
 }
 
+// const testimonials: Testimonial[] = [
+//   {
+//     id: 1,
+//     name: "Tracey Wilson",
+//     title: "University of Maryland",
+//     location: "USA",
+//     image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200&h=200",
+//     message: "Thank you! We are enjoying the conference! The sessions have been incredibly insightful and the networking opportunities are fantastic.",
+//   },
+//   {
+//     id: 2,
+//     name: "Irena Laska, Blerina Duka",
+//     title: "Albanian Order of Nurses",
+//     location: "Albania",
+//     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200&h=200",
+//     message: "Blerina and me (Irena), wanted to thank you very much indeed for giving us opportunity to be active part of NWC in London last week.",
+//   },
+//   {
+//     id: 3,
+//     name: "Aretuza Cruz Vieira",
+//     title: "Albert Einstein Hospital",
+//     location: "Brazil",
+//     image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200&h=200",
+//     message: "The Conference was really nice! I appreciated the diverse topics covered and the smooth organization of the entire event.",
+//   },
+//   {
+//     id: 4,
+//     name: "Daryle Wane",
+//     title: "Nurse Consultant",
+//     location: "Florida, United States",
+//     image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=200&h=200",
+//     message: "Thank you for allowing me to participate once again. Year after year, it remains an excellent opportunity to share research.",
+//   },
+//   {
+//     id: 5,
+//     name: "Sarah Jenkins",
+//     title: "Clinical Specialist",
+//     location: "UK",
+//     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=200&h=200",
+//     message: "An outstanding gathering of professionals. The keynote speakers were particularly inspiring this year.",
+//   }
+// ];
+
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Tracey Wilson",
-    title: "University of Maryland",
-    location: "USA",
+    name: "Dr. Aisha Raman",
+    title: "Robotics Researcher, IIT Delhi",
+    location: "India",
     image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200&h=200",
-    message: "Thank you! We are enjoying the conference! The sessions have been incredibly insightful and the networking opportunities are fantastic.",
+    message:
+      "The sessions were informative, and the networking opportunities were extremely beneficial for my academic growth."
   },
   {
     id: 2,
-    name: "Irena Laska, Blerina Duka",
-    title: "Albanian Order of Nurses",
-    location: "Albania",
+    name: "Miguel Alvarez",
+    title: "AI Systems Engineer, Barcelona Robotics Lab",
+    location: "Spain",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200&h=200",
-    message: "Blerina and me (Irena), wanted to thank you very much indeed for giving us opportunity to be active part of NWC in London last week.",
+    message:
+      "The conference successfully bridged the gap between academia and industry. I look forward to participating in future editions."
   },
   {
     id: 3,
-    name: "Aretuza Cruz Vieira",
-    title: "Albert Einstein Hospital",
-    location: "Brazil",
+    name: "Dr. Hana Sato",
+    title: "Autonomous Navigation Specialist, Kyoto Tech",
+    location: "Japan",
     image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200&h=200",
-    message: "The Conference was really nice! I appreciated the diverse topics covered and the smooth organization of the entire event.",
+    message:
+      "As a student, this conference was very motivatingIt was an inspiring learning experience."
   },
   {
     id: 4,
-    name: "Daryle Wane",
-    title: "Nurse Consultant",
-    location: "Florida, United States",
+    name: "Jonathan Miller",
+    title: "Lead Robotics Engineer, RoboNext",
+    location: "USA",
     image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=200&h=200",
-    message: "Thank you for allowing me to participate once again. Year after year, it remains an excellent opportunity to share research.",
+    message:
+      "well organized with a strong focus on current research trends.it a valuable platform for academic exchange"
   },
   {
     id: 5,
-    name: "Sarah Jenkins",
-    title: "Clinical Specialist",
+    name: "Emily Carter",
+    title: "PhD Scholar in AI & Robotics, University of Manchester",
     location: "UK",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=200&h=200",
-    message: "An outstanding gathering of professionals. The keynote speakers were particularly inspiring this year.",
+    message:
+      "Organizing committee ensured timely communication, well-planned sessions, and a professional atmosphere."
+  },
+    {
+    id: 6,
+    name: "Emily Carter",
+    title: "PhD Scholar in AI & Robotics, University of Manchester",
+    location: "UK",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=200&h=200",
+    message:
+      "I was impressed by the scientific  and the global participation at the conference. It was a pleasure to be part of such academic event."
   }
 ];
+
+
+
 
 const Testimonials: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

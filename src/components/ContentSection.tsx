@@ -299,7 +299,7 @@ const ContentSection: React.FC = () => {
 
   <p className="mb-5">
     
-      We welcome you to the 2nd Edition of the Artificial Intelligence,
+      We welcome you to the 3rd Edition of the Artificial Intelligence,
       Machine Learning & Robotics Conference (AIMLR 2026), scheduled from
       July 28–30, 2026, in Rome, Italy — and accessible worldwide through
       our hybrid (onsite + virtual) format. This ensures global participation,

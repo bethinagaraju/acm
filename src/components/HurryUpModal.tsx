@@ -231,7 +231,7 @@ const HurryUpModal: React.FC<HurryUpModalProps> = ({ isOpen, onClose, endTime })
       <div className="w-72 bg-white rounded-xl shadow-2xl overflow-hidden border-2 border-blue-500/20 relative">
         
         {/* Glow Effect */}
-        <div className="absolute -inset-1 bg-blue-500 opacity-20 blur-lg -z-10"></div>
+        <div className="absolute -inset-1 bg-[#2f396e] opacity-20 blur-lg -z-10"></div>
 
         {/* Close Button */}
         <button
