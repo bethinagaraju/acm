@@ -5674,6 +5674,9 @@ const RegistrationPage: React.FC = () => {
     const [price, setPrice] = useState(0);
     const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
+
+    
+
     // Captcha Logic
     const generateCaptcha = () => {
         const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
@@ -5809,24 +5812,80 @@ const RegistrationPage: React.FC = () => {
         return Object.keys(newErrors).length === 0;
     };
 
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        if (!validate()) return;
+    // const handleSubmit = async (e: React.FormEvent) => {
+    //     e.preventDefault();
+    //     if (!validate()) return;
 
-        setLoading(true);
-        try {
-            const res = await axios.post(
-                "https://backendconf.roboticsaisummit.com/api/registration/create",
-                formData
-            );
-            window.location.href = res.data.checkoutUrl;
-        } catch (error) {
-            console.error(error);
-            setErrors(prev => ({ ...prev, general: "Registration failed. Please try again later." }));
-        } finally {
-            setLoading(false);
+    //     setLoading(true);
+    //     try {
+    //         const res = await axios.post(
+    //             "https://backendconf.roboticsaisummit.com/api/registration/create",
+    //             formData
+    //         );
+    //         window.location.href = res.data.checkoutUrl;
+    //     } catch (error) {
+    //         console.error(error);
+    //         setErrors(prev => ({ ...prev, general: "Registration failed. Please try again later." }));
+    //     } finally {
+    //         setLoading(false);
+    //     }
+    // };
+
+
+    const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  if (!validate()) return;
+
+  setLoading(true);
+  setErrors({}); // reset old errors
+
+  try {
+    const res = await axios.post(
+      "https://backendconf.roboticsaisummit.com/api/registration/create",
+    // "http://localhost:8080/api/registration/create",
+      formData
+    );
+
+    // ✅ Success → redirect to payment
+    window.location.href = res.data.checkoutUrl;
+
+  } catch (error: any) {
+    console.error(error);
+
+    // ✅ Handle "already registered" case
+    if (
+      error.response &&
+      error.response.data &&
+      error.response.data.error === "User already registered with this email"
+    ) {
+      setErrors({
+        email: "This email is already registered for the conference.",
+        general: "You have already completed registration using this email address."
+      });
+
+      // Scroll to error section
+      setTimeout(() => {
+        if (emailRef.current) {
+          const y =
+            emailRef.current.getBoundingClientRect().top +
+            window.scrollY -
+            100;
+          window.scrollTo({ top: y, behavior: "smooth" });
+          emailRef.current.focus();
         }
-    };
+      }, 100);
+
+    } else {
+      // ❌ Generic fallback error
+      setErrors({
+        general: "Registration failed. Please try again later."
+      });
+    }
+  } finally {
+    setLoading(false);
+  }
+};
+
 
     useEffect(() => {
         const handlePasteShortcut = (e: KeyboardEvent) => {
@@ -5842,6 +5901,20 @@ const RegistrationPage: React.FC = () => {
         window.addEventListener('keydown', handlePasteShortcut);
         return () => window.removeEventListener('keydown', handlePasteShortcut);
     }, []);
+
+
+
+    const ACCOMMODATION_PER_NIGHT = 175;
+
+const accommodationCost =
+  formData.registrationType === "withAccommodation"
+    ? ACCOMMODATION_PER_NIGHT * formData.numberOfNights
+    : 0;
+
+const registrationCost =
+  formData.registrationType === "withAccommodation"
+    ? price - accommodationCost
+    : price;
 
     // ---------------- RENDER UI ----------------
 
@@ -6103,8 +6176,13 @@ const RegistrationPage: React.FC = () => {
                                 </div>
                             )}
 
+
+
+
+
+
                             {/* PRICING SUMMARY */}
-                            {formData.planId && (
+                            {/* {formData.planId && (
                                 <div className="payment-summary">
                                     <h3 className="text-lg font-semibold mb-4">Pricing Summary</h3>
                                     <div className="mb-4 p-4 bg-gray-50 rounded-lg">
@@ -6113,11 +6191,11 @@ const RegistrationPage: React.FC = () => {
                                         <div className="flex justify-between items-center mb-2">
                                             <span className="font-medium">{formData.presentationType} Registration</span>
                                             <span className="font-semibold">
-                                                {/* Logic to show correct price breakdown */}
+                                               
                                                 €{formData.registrationType === "withAccommodation" 
-                                                    ? (price - (formData.numberOfNights * 100)) // Approximation or logical split if possible
+                                                    ? (price - (formData.numberOfNights * 100)) 
                                                     : price}
-                                                {/* Note: Since your JSON gives a total bundle price, simply showing 'price' here might be safer unless you have exact split logic */}
+                                                
                                             </span>
                                         </div>
 
@@ -6127,7 +6205,7 @@ const RegistrationPage: React.FC = () => {
                                                     Accommodation ({formData.numberOfNights} night{formData.numberOfNights > 1 ? 's':''})
                                                 </span>
                                                 <span className="font-semibold">
-                                                    {/* This is a visual placeholder logic - adjust if your JSON has specific room rates */}
+                                                    
                                                     Included in Total
                                                 </span>
                                             </div>
@@ -6163,7 +6241,107 @@ const RegistrationPage: React.FC = () => {
                                         </div>
                                     </div>
                                 </div>
-                            )}
+                            )} */}
+
+
+
+
+
+                            {/* PRICING SUMMARY */}
+{formData.planId && (
+  <div className="payment-summary">
+    <h3 className="text-lg font-semibold mb-4">Pricing Summary</h3>
+
+    <div className="mb-4 p-4 bg-gray-50 rounded-lg">
+      <h4 className="font-semibold text-lg mb-3 text-gray-900">
+        Order Details
+      </h4>
+
+      {/* REGISTRATION */}
+      <div className="flex justify-between items-center mb-2">
+        <span className="font-medium uppercase">
+          {formData.presentationType} Registration
+        </span>
+        <span className="font-semibold">
+          €{registrationCost.toFixed(2)}
+        </span>
+      </div>
+
+      {/* ACCOMMODATION */}
+      {formData.registrationType === "withAccommodation" && (
+        <div className="flex justify-between items-center mb-2">
+          <span className="font-medium">
+            Accommodation ({formData.numberOfNights} night
+            {formData.numberOfNights > 1 ? "s" : ""},{" "}
+            {formData.numberOfGuests} guest
+            {formData.numberOfGuests > 1 ? "s" : ""})
+          </span>
+          <span className="font-semibold">
+            €{accommodationCost.toFixed(2)}
+          </span>
+        </div>
+      )}
+
+      <div className="border-t border-gray-300 my-3"></div>
+
+      {/* SUBTOTAL */}
+      <div className="flex justify-between items-center mb-2">
+        <span className="text-gray-600">Subtotal</span>
+        <span className="font-medium">€{price.toFixed(2)}</span>
+      </div>
+
+      {/* PROCESSING FEE */}
+      <div className="flex justify-between items-center mb-3">
+        <span className="text-gray-600">Processing Fee (5%)</span>
+        <span className="font-medium">
+          €{processingFee.toFixed(2)}
+        </span>
+      </div>
+
+      {/* TOTAL */}
+      <div className="flex justify-between items-center font-bold text-xl border-t border-gray-400 pt-3">
+        <span>Total Amount</span>
+        <span className="text-green-600">
+          €{totalAmount.toFixed(2)}
+        </span>
+      </div>
+    </div>
+
+    {/* INFO BOX */}
+    <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+      <div className="flex items-start">
+        <svg
+          className="w-5 h-5 text-blue-600 mt-0.5 mr-2 flex-shrink-0"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+        <div className="text-sm text-blue-800">
+          <p className="font-semibold mb-1">Secure Payment Process</p>
+          <p>
+            After clicking <b>"Register & Pay Now"</b>, you will be redirected
+            to a secure payment page to complete your registration.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
+
+
+
+
+
+
+
+                            
 
                                                         {/* CAPTCHA SECTION */}
                             <div className="captcha-section">

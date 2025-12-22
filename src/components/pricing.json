@@ -3,8 +3,8 @@
     { "planId": "plan_HcVxJS4fF80A2", "registrationType": "registrationOnly", "presentationType": "Speaker", "nights": 0, "price": 649 },
     { "planId": "plan_PvUcmaWkyl8Nk", "registrationType": "registrationOnly", "presentationType": "Poster", "nights": 0, "price": 499 },
     { "planId": "plan_40FMbmbpjflvh", "registrationType": "registrationOnly", "presentationType": "Delegate", "nights": 0, "price": 749 },
-    { "planId": "EARLY_LISTENER", "registrationType": "registrationOnly", "presentationType": "Listener", "nights": 0, "price": 749 },
-    { "planId": "EARLY_STUDENT", "registrationType": "registrationOnly", "presentationType": "Student", "nights": 0, "price": 349 },
+    { "planId": "plan_2A1Q6jrlA2LkY", "registrationType": "registrationOnly", "presentationType": "Listener", "nights": 0, "price": 749 },
+    { "planId": "plan_2A1Q6jrlA2LkY", "registrationType": "registrationOnly", "presentationType": "Student", "nights": 0, "price": 349 },
 
     { "planId": "ACC_SPEAKER_1N", "registrationType": "withAccommodation", "presentationType": "Speaker", "nights": 1, "price": 824 },
     { "planId": "ACC_SPEAKER_2N", "registrationType": "withAccommodation", "presentationType": "Speaker", "nights": 2, "price": 999 },
