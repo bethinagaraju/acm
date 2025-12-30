@@ -7,7 +7,7 @@
 // // import BiotechAgenda from "../components/BiotechAgenda";
 // // import EndFooter from "../components/EndFooter";
 // // import VenueTravelPage from "./VenueTravelPage";
-// // import FAQS from "../components/FAQS";
+// // import FAQS from "../components/faqS";
 // // import CommitteePage from "./CommitteePage";
 
 // // const ScrollFaq: React.FC = () => {
@@ -126,7 +126,7 @@ import Header from "../components/Header";
 import MobileSidebarMenu from "../components/MobileSidebarMenu";
 import CommitteePage from "./CommitteePage";
 import EndFooter from "../components/EndFooter";
-import FAQS from "../components/FAQS";
+import FAQS from "../components/faqS";
 
 const ScrollFaq: React.FC = () => {
   return (

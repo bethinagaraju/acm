@@ -14,7 +14,7 @@
 //         <p className="font-semibold">Conference</p>
 //         <div className="ml-6 mt-2 space-y-2 text-[15px]">
 //           <Link to="/about" className="block">About Conference</Link>
-//           <Link to="/commitee" className="block">Committee</Link>
+//           <Link to="/committee" className="block">Committee</Link>
 //         </div>
 //       </div>
 
@@ -82,8 +82,8 @@ export default function MobileSidebarMenu() {
           </Link>
 
           <Link
-            to="/commitee"
-            className={`${isActive("/commitee")} ${activeIndicator("/commitee")} block`}
+            to="/committee"
+            className={`${isActive("/committee")} ${activeIndicator("/committee")} block`}
           >
             Committee
           </Link>

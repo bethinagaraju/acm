@@ -492,24 +492,18 @@ const ContentSection: React.FC = () => {
           <p className="mb-3">
             AIMLR 2026 aims to support meaningful knowledge exchange,
             professional networking, and collaboration within the global
-            research community.
+            research community.<Link to="/about" className="text-[#0091b5] hover:text-[#00488B] hover:underline ml-1">Know more</Link>
           </p>
         </div>
 
         {/* --- BUTTON GROUP --- */}
         <div className="clear-both pt-8 mt-4 border-t border-gray-100">
-          <div className="flex flex-wrap gap-4">
+          <div className="flex gap-4">
             <Link to="/register">
               <button className="bg-[#00488B] hover:bg-[#0E64C4] text-white px-6 py-3 text-sm font-bold tracking-wide shadow-md transition-all transform hover:-translate-y-0.5">
                 REGISTER NOW
               </button>
             </Link>
-
-            {/* <a href="/#contact-form">
-              <button className="bg-[#002F30] hover:bg-[#044A4C] text-white px-6 py-3 text-sm font-bold tracking-wide shadow-md transition-all transform hover:-translate-y-0.5">
-                SPONSORSHIP ENQUIRY
-              </button>
-            </a> */}
 
             <Link to="/AbstractSubmission">
               <button className="bg-[#232357] hover:bg-[#36368C] text-white px-6 py-3 text-sm font-bold tracking-wide shadow-md transition-all transform hover:-translate-y-0.5">

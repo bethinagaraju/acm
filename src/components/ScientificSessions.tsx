@@ -131,12 +131,15 @@ const sessions = [
     <section className="w-full py-12 px-6 max-w-6xl mx-auto">
       
       {/* Title */}
-      <h2 className="text-3xl sm:text-4xl font-semibold text-center text-[#053047] mb-10">
-        {/* Scientific Sessions */}
-        {/* Conference Topicsss */}
-        {/* SESSIONS & TRACKS */}
-        CONFERENCE TOPICS
-      </h2>
+      {/* <h2 className="text-3xl sm:text-4xl font-semibold text-center text-[#053047] mb-10">
+
+        CONFERENCE TOPICSa
+      </h2> */}
+
+
+          <h2 className="text-3xl font-bold text-[#00488B] mb-10 text-center">
+            AIMLR - 2026 CONFERENCE TOPICS
+          </h2>
 
       {/* Grid including buttons */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

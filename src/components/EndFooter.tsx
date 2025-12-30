@@ -123,7 +123,7 @@
 //                 ["Guidelines", "/guidelines"],
 //                 ["Terms & Conditions", "/terms-and-conditions"],
 
-//                 ["Committee", "/commitee"],
+//                 ["Committee", "/committee"],
 //                 ["Call for Papers", "/call-for-papers"],
 //                 ["Program Schedule", "/schedule"],
 //                 ["FAQ", "/faq"],
@@ -285,7 +285,7 @@ const EndFooter: React.FC = () => {
   };
 
   return (
-    <footer className="bg-gray-50 text-[#002d45] text-sm relative border-t border-gray-200">
+    <footer className="bg-[#eef2f7] text-[#002d45] text-sm relative border-t border-gray-200">
 
       {/* ================= COOKIE SIDEBAR ================= */}
       <Sidebar
@@ -408,7 +408,7 @@ const EndFooter: React.FC = () => {
                 ["Guidelines", "/guidelines"],
                 ["Terms & Conditions", "/terms-and-conditions"],
 
-                ["Committee", "/commitee"],
+                ["Committee", "/committee"],
                 ["Call for Papers", "/call-for-papers"],
                 ["Program Schedule", "/schedule"],
                 ["FAQ", "/faq"],

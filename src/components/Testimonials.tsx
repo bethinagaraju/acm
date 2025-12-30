@@ -120,7 +120,11 @@ const Testimonials: React.FC = () => {
         
         {/* Title */}
         <div className="text-center text-white mb-12">
-          <h2 className="text-4xl font-bold">Participants Feedback</h2>
+          {/* <h2 className="text-4xl font-bold">Participants Feedback</h2> */}
+
+          <h2 className="text-3xl font-bold text-[#ffffff] mb-4 text-center">
+            AIMLR - 2025 PARTICIPANTS FEEDBACK
+          </h2>
         </div>
 
         <div className="flex items-center justify-center gap-4">

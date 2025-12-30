@@ -233,7 +233,7 @@ const WhyAttendNew: React.FC = () => {
   return (
     <section className="
       relative min-h-screen 
-      py-16 sm:py-20 lg:py-24        /* ✅ mobile-first spacing */
+      py-16 sm:py-8 lg:py-16       /* ✅ mobile-first spacing */
       px-4 sm:px-6 lg:px-8
       bg-[#020617] overflow-hidden
       flex flex-col justify-center
@@ -242,12 +242,16 @@ const WhyAttendNew: React.FC = () => {
 
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <h2 className="
-            text-3xl sm:text-4xl md:text-5xl   /* ✅ responsive title */
+          {/* <h2 className="
+            text-3xl sm:text-4xl md:text-5xl 
             font-bold text-white 
             mb-3 sm:mb-4
           ">
             Why Attend AIMLR 2026?
+          </h2> */}
+
+          <h2 className="text-3xl font-bold text-[#ffffff] mb-8 text-center">
+           WHY ATTEND AIMLR - 2026 ?
           </h2>
 
           <p className="

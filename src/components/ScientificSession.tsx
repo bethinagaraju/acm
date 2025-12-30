@@ -333,7 +333,7 @@ const ScientificSession: React.FC = () => {
   return (
     <div className="w-full">
 
-      <h1 className='text-center text-4xl font-semibold mb-8 text-[#2e376c]'>CONFERENCE TOPICS</h1>
+      <h1 className='text-center text-4xl font-semibold mb-8 text-[#2e376c]'>AIMLR - 2026 CONFERENCE TOPICS</h1>
 
       {/* SESSION GRID */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">

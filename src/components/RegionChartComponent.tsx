@@ -176,13 +176,17 @@ function Dashboard() {
   return (
     <div className="max-w-7xl mx-auto py-4 md:py-6 px-2 md:px-5 space-y-5 md:space-y-9">
     
-            <h1
+            {/* <h1
         style={{ fontFamily: "'Manrope', sans-serif", color: '#2e376c' }}
         className="text-center text-2xl md:text-3xl font-bold mb-4"
       >
         
         WHO'S PARTICIPATING THE CONFERENCE, 2026
-      </h1>
+      </h1> */}
+
+                <h2 className="text-3xl font-bold text-[#00488B] mb-6 text-center">
+            WHO'S PARTICIPATING IN AIMLR - 2026 CONFERENCE
+          </h2>
       {/* Top Row */}
       <div className="flex flex-col md:flex-row gap-5 md:gap-8">
         <div className="md:flex-[2] w-full min-w-0">

@@ -134,12 +134,17 @@ const Highletsec: React.FC = () => {
     <section className="w-full relative py-6">
 
       {/* ================= TITLE ================= */}
-      <h1
+      {/* <h1
         style={{ fontFamily: "'Manrope', sans-serif", color: "#2e376c" }}
         className="text-center text-xl sm:text-2xl md:text-3xl font-bold mb-6"
       >
         AIMLR 2025 EDITION
-      </h1>
+      </h1> */}
+
+
+        <h2 className="text-3xl font-bold text-[#00488B] text-center mb-2">
+            AIMLR - 2025 EDITION
+        </h2>
 
       {/* ================= MOBILE VIEW ================= */}
       <div className="md:hidden relative flex items-center justify-center overflow-hidden">

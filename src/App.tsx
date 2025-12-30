@@ -15,9 +15,8 @@ import AbstractSubmissionPage from './pages/AbstractSubmissionPage';
 import CheckoutPage from './components/CheckoutPage';
 import RegisterPasses from './components/RegisterPasses';
 import ThankyouPage from './pages/ThankyouPage';
-import DisplayAbstracts from './components/DisplayAbstarcts';
-import AdminLogin from './components/AdminLogin';
-import ProtectedRoute from './components/ProtectedRoute';
+
+
 import TermsAndConditionsPage from './pages/TermsAndConditionsPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import CookiePolicyPage from './pages/CookiePolicyPage';
@@ -27,11 +26,11 @@ import CommitteePage from './pages/CommitteePage';
 import PastConferencesPage from './pages/PastConferencesPage';
 import Posterpage from './pages/Posterpage';
 import CallForPapersPage from './pages/CallForPapersPage';
-import ReviewProcessPage from './pages/ReviewProcessPage';
-import PublicationIndexingPage from './pages/PublicationIndexingPage';
-import ProgramSchedulePage from './pages/ProgramSchedulePage';
-import VenueTravelPage from './pages/VenueTravelPage';
-import SponsorsPage from './pages/SponsorsPage';
+
+
+
+
+
 import ScrollToTop from './components/ScrollToTop';
 import ContactPage from './pages/ContactPage';
 import HurryUpModal from './components/HurryUpModal';
@@ -41,7 +40,7 @@ import ScrollGuidelines from './pages/ScrollGuidlines';
 import ScrollFaq from './pages/ScrollFaq';
 import ScrollCommiteePage from './pages/ScrollCommiteePage';
 import ScrollSchedule from './pages/ScrollSchedule';
-import NEWRegister from './components/NEWRegister';
+
 import PaymentSuccess from './components/PaymentSuccess';
 import ComboKeyDatesAndVenue from './components/ComboKeyDatesAndVenue';
 import AboutTheCallPage from './pages/AboutTheCallPage';
@@ -98,7 +97,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         {/* <Route path="/register" element={<RegisterPage />} /> */}
         <Route path="/register" element={<RegisterPasses />} />
-        <Route path="/newregister" element={<NEWRegister />} />
+
         <Route path='/AbstractSubmission' element={<AbstractSubmissionPage />} />
         <Route path="/payment-success" element={<PaymentSuccess />} />
         <Route path='/checkout' element={<CheckoutPage />} />
@@ -106,33 +105,35 @@ function App() {
         <Route path='/terms-and-conditions' element={<TermsAndConditionsPage />} />
         <Route path='/privacy-policy' element={<PrivacyPolicyPage />} />
         <Route path='/cookie-policy' element={<CookiePolicyPage />} />
-        <Route path='/r0B01t26' element={<AdminLogin />} />
-        <Route path="/abstracts" element={<ProtectedRoute><DisplayAbstracts /></ProtectedRoute>} />
+
         <Route path="/agenda" element={<BiotechAgenda />} />
         <Route path="/speakers" element={<SpeakersPage />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/committee" element={<CommitteePage />} />
+        {/* <Route path="/committee" element={<CommitteePage />} /> */}
         <Route path="/past-conferences" element={<PastConferencesPage />} />
         <Route path="/call-for-papers" element={<CallForPapersPage />} />
         <Route path="/call-for-posters" element={<CallForPostersPage />} />
         <Route path="/call-for-speakers" element={<CallForSpeakersPage />} />
         <Route path="/call-for-reviewers" element={<CallForReviewersPage />} />
-        <Route path="/review-process" element={<ReviewProcessPage />} />
-        <Route path="/publication-indexing" element={<PublicationIndexingPage />} />
-        <Route path="/program-schedule" element={<ProgramSchedulePage />} />
-        <Route path="/venue-travel" element={<VenueTravelPage />} />
-        <Route path="/sponsors" element={<SponsorsPage />} />
+
+      
+        
+
         <Route path="/contact" element={<ContactPage />} />
         <Route path='/sessions' element={<ScrollbarPage />} />
         <Route path='/venue' element={<ScrollVenuePage />} />
+
+
         <Route path='/guidelines' element={<ScrollGuidelines />} />
-        <Route path='/Faq' element={<ScrollFaq />} />
-        <Route path='/commitee' element={<ScrollCommiteePage />} />
+
+        
+        <Route path='/faq' element={<ScrollFaq />} />
+        <Route path='/committee' element={<ScrollCommiteePage />} />
         <Route path='/schedule' element={<ScrollSchedule />} />
         <Route path='/poster' element={<Posterpage />} />
         <Route path='/importantdates' element={<ComboKeyDatesAndVenue />} />
         <Route path='/call-for-abstract' element={<AboutTheCallPage />} />
-        <Route path='/call-for-papers' element={<CallForPapersPage />} />
+        {/* <Route path='/call-for-papers' element={<CallForPapersPage />} /> */}
 
       </Routes>
 

@@ -17,7 +17,7 @@ const CTARegisterAbstract: React.FC = () => {
           {/* Left text */}
           <div className="flex-1 text-center md:text-left">
             <h2 className="text-2xl md:text-3xl font-bold mb-2" style={{ fontFamily: "'Manrope', sans-serif" }}>
-              Ready to join AIMLR 2026?
+              Ready to join AIMLR - 2026?
             </h2>
             <p className="text-indigo-100 text-sm md:text-base max-w-2xl">
               Secure your spot today or submit your research — two quick actions to become part of the global AI, ML & Robotics community.

@@ -111,7 +111,7 @@ const BottomNavbar = ({ menuOpen, setMenuOpen, headerRef }: { menuOpen: boolean,
             {hovered === "conference" && (
               <div className="absolute top-full left-0 bg-white text-black shadow-md rounded-md py-2 min-w-[220px] z-10">
                 <Link to="/about" className="block px-4 py-2 hover:bg-gray-100">About Conference</Link>
-                <Link to="/commitee" className="block px-4 py-2 hover:bg-gray-100">Committee</Link>
+                <Link to="/committee" className="block px-4 py-2 hover:bg-gray-100">Committee</Link>
                 {/* <Link to="/past-conferences" className="block px-4 py-2 hover:bg-gray-100">Past Conferences</Link> */}
               </div>
             )}
@@ -210,7 +210,7 @@ const BottomNavbar = ({ menuOpen, setMenuOpen, headerRef }: { menuOpen: boolean,
               {conferenceOpen && (
                 <div className="ml-4 space-y-2 mt-2">
                   <Link to="/about" className="block text-gray-600 hover:text-gray-800">About Conference</Link>
-                  <Link to="/commitee" className="block text-gray-600 hover:text-gray-800">Committee</Link>
+                  <Link to="/committee" className="block text-gray-600 hover:text-gray-800">Committee</Link>
                 </div>
               )}
             </div>

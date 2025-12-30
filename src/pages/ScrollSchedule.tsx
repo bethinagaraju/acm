@@ -7,7 +7,7 @@
 // // // // import BiotechAgenda from "../components/BiotechAgenda";
 // // // // import EndFooter from "../components/EndFooter";
 // // // // import VenueTravelPage from "./VenueTravelPage";
-// // // // import FAQS from "../components/FAQS";
+// // // // import FAQS from "../components/faqS";
 // // // // import CommitteePage from "./CommitteePage";
 
 // // // // const ScrollSchedule: React.FC = () => {
@@ -86,7 +86,7 @@
 // // // import BiotechAgenda from "../components/BiotechAgenda";
 // // // import EndFooter from "../components/EndFooter";
 // // // import VenueTravelPage from "./VenueTravelPage";
-// // // import FAQS from "../components/FAQS";
+// // // import FAQS from "../components/faqS";
 // // // import CommitteePage from "./CommitteePage";
 
 // // // const ScrollSchedule: React.FC = () => {

@@ -67,7 +67,7 @@ const OrganizerOverview: React.FC = () => {
           <p className="text-gray-500 text-sm mb-6">
             Supported by leading institutions and organizations worldwide
           </p>
-          <Link to="/commitee">
+          <Link to="/committee">
             <button className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors font-semibold shadow-md hover:shadow-lg">
               View Full Committee
             </button>

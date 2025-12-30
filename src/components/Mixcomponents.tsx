@@ -391,12 +391,10 @@ function Mixcomponents() {
       {/* Main Content Only */}
       <div className="col-span-full p-0">
 
-        <h1
-          style={{ fontFamily: "'Manrope', sans-serif", color: '#2e376c', paddingBottom: '0.5rem' }}
-          className="text-center text-xl md:text-3xl font-bold mb-6"
-        >
-          SPEAKERS
-        </h1>
+
+          <h2 className="text-3xl font-bold text-[#00488B] mb-8 text-center">
+            AIMLR - 2026 SPEAKERS
+          </h2>
 
         {/* Speakers Grid 4x2 */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-8">
