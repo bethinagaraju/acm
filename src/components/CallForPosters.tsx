@@ -138,11 +138,21 @@ const CallForPosters: React.FC = () => {
       {/* Buttons */}
       <div className="flex flex-col sm:flex-row gap-4 mt-16 border-t pt-8">
 
-        <Link to="/register" className="flex items-center justify-center gap-2 px-8 py-3 bg-[#304278] text-white font-semibold rounded hover:bg-[#304278] transition-colors">
+        <Link
+          to="/register"
+          className="flex items-center justify-center gap-2 px-8 py-3 bg-[#304278] text-white font-semibold rounded hover:bg-[#304278] transition-colors"
+          title="Register for the AIMLR 2026 Conference in Rome"
+          aria-label="Register for the AIMLR 2026 Conference in Rome"
+        >
           Register Now <ArrowRight className="w-4 h-4" />
         </Link>
 
-        <Link to="/AbstractSubmission" className="flex items-center justify-center gap-2 px-8 py-3 border-2 border-gray-200 text-gray-700 font-semibold rounded hover:border-[#0091b5] hover:text-[#0091b5] transition-colors">
+        <Link
+          to="/AbstractSubmission"
+          className="flex items-center justify-center gap-2 px-8 py-3 border-2 border-gray-200 text-gray-700 font-semibold rounded hover:border-[#0091b5] hover:text-[#0091b5] transition-colors"
+          title="Submit your poster abstract for AIMLR 2026 Conference"
+          aria-label="Submit your poster abstract for AIMLR 2026 Conference"
+        >
           Submit Poster Abstract
         </Link>
       </div>

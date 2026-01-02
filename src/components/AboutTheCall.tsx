@@ -12,9 +12,46 @@ import {
   ArrowRight
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const AboutTheCall: React.FC = () => {
   return (
+    <>
+
+    <Helmet>
+  {/* ✅ 1. TITLE: Specific to "Call for Papers" + High Traffic Keywords */}
+  <title>Call for Papers | AI, ML & Robotics Conference 2026 Rome</title>
+
+  {/* ✅ 2. DESCRIPTION: Focuses on "Full Papers" and "Proceedings" */}
+  <meta 
+    name="description" 
+    content="Submit your full research paper for the AI, ML & Robotics Conference (AIMLR 2026) in Rome. Peer-reviewed publication opportunities in conference proceedings. Deadline: July 2026." 
+  />
+
+  {/* ✅ 3. KEYWORDS: Targeted for academic publishing */}
+  <meta 
+    name="keywords" 
+    content="Call for Papers AI, AI ML Robotics Conference, Research Paper Submission, Conference Proceedings, IEEE Format, Peer Review, Artificial Intelligence Journal" 
+  />
+
+  {/* ✅ 4. CANONICAL: Points to the correct page (Not /call-for-abstract) */}
+  <link rel="canonical" href="https://roboticsaisummit.com/call-for-papers" />
+
+  {/* 5. Open Graph / Facebook */}
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://roboticsaisummit.com/call-for-papers" />
+  <meta property="og:title" content="Call for Papers - AI, ML & Robotics Conference 2026" />
+  <meta property="og:description" content="Submit your full paper for AIMLR 2026. Join global researchers in Rome for peer-reviewed presentation and publication." />
+  <meta property="og:image" content="https://roboticsaisummit.com/aimllogo.jpg" />
+  <meta property="og:site_name" content="AIMLR 2026" />
+
+  {/* 6. Twitter Cards */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Call for Papers | AIMLR 2026 Rome" />
+  <meta name="twitter:description" content="Submit your full research paper for the premier AI, ML & Robotics conference." />
+  <meta name="twitter:image" content="https://roboticsaisummit.com/aimllogo.jpg" />
+</Helmet>
+
     <div className="max-w-5xl mx-auto px-6 py-12 font-sans text-gray-800">
 
       {/* Page Header */}
@@ -124,7 +161,12 @@ const AboutTheCall: React.FC = () => {
             ))}
             <li className="flex items-start gap-3">
               <ChevronRight className="w-5 h-5 text-[#272b5f] mt-0.5 shrink-0" />
-              <Link to="/sessions" className="leading-relaxed text-blue-600 hover:text-blue-800 underline">
+              <Link
+                to="/sessions"
+                className="leading-relaxed text-blue-600 hover:text-blue-800 underline"
+                title="View more topics for AIMLR 2026 Conference"
+                aria-label="View more topics for AIMLR 2026 Conference"
+              >
                 more topics
               </Link>
             </li>
@@ -231,15 +273,26 @@ const AboutTheCall: React.FC = () => {
       {/* Buttons */}
       <div className="flex flex-col sm:flex-row gap-4 mt-16 border-t pt-8">
         
-        <Link to="/register" className="flex items-center justify-center gap-2 px-8 py-3 bg-[#304278] text-white font-semibold rounded hover:bg-[#304278] transition-colors">
+        <Link
+          to="/register"
+          className="flex items-center justify-center gap-2 px-8 py-3 bg-[#304278] text-white font-semibold rounded hover:bg-[#304278] transition-colors"
+          title="Register for the AIMLR 2026 Conference in Rome"
+          aria-label="Register for the AIMLR 2026 Conference in Rome"
+        >
           Register Now <ArrowRight className="w-4 h-4" />
         </Link>
 
-        <Link to="/AbstractSubmission" className="flex items-center justify-center gap-2 px-8 py-3 border-2 border-gray-200 text-gray-700 font-semibold rounded hover:border-[#0091b5] hover:text-[#0091b5] transition-colors">
+        <Link
+          to="/AbstractSubmission"
+          className="flex items-center justify-center gap-2 px-8 py-3 border-2 border-gray-200 text-gray-700 font-semibold rounded hover:border-[#0091b5] hover:text-[#0091b5] transition-colors"
+          title="Submit your abstract for AIMLR 2026 Conference"
+          aria-label="Submit your abstract for AIMLR 2026 Conference"
+        >
           Abstract Submission
         </Link>
       </div>
     </div>
+    </>
   );
 };
 

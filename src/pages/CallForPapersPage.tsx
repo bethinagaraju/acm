@@ -10,7 +10,7 @@ const CallForPapersPage: React.FC = () => {
     <>
     <Helmet>
       {/* 1. Optimized Title & Description */}
-      <title>Call for Abstracts | AI & Robotics Conference 2026 Rome</title>
+      <title>Call for Abstracts | AI, ML & Robotics Conference 2026 Rome</title>
       <meta 
         name="description" 
         content="Submit your abstract for AIMLR 2026. Join global researchers in AI, Machine Learning & Robotics in Rome, July 28-30. Deadline: Jan 30, 2026." 
@@ -34,13 +34,13 @@ const CallForPapersPage: React.FC = () => {
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://roboticsaisummit.com/call-for-abstract" />
       <meta property="og:title" content="Call for Abstracts - AIMLR 2026 Rome" />
-      <meta property="og:description" content="We invite researchers to submit abstracts for the 3rd Global Conference on AI & Robotics. Share your work with international experts." />
+      <meta property="og:description" content="We invite researchers to submit abstracts for the 3rd Global Conference on AI, ML & Robotics. Share your work with international experts." />
       <meta property="og:image" content="https://roboticsaisummit.com/aimllogo.jpg" />
 
       {/* 6. Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Call for Abstracts | AIMLR 2026" />
-      <meta name="twitter:description" content="Submit your research for the premier AI & Robotics conference in Rome." />
+      <meta name="twitter:description" content="Submit your research for the premier AI, ML & Robotics conference in Rome." />
       <meta name="twitter:image" content="https://roboticsaisummit.com/aimllogo.jpg" />
     </Helmet>
     <div className="font-sans bg-white min-h-screen flex flex-col">
@@ -56,7 +56,7 @@ const CallForPapersPage: React.FC = () => {
           <div className="w-full flex-1 p-2 lg:pl-8 max-h-full overflow-y-auto">
             <CallForPapers />
           </div>
-
+    
         </div>
       </section>
 

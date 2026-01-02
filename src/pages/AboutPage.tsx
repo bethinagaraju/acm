@@ -100,14 +100,71 @@ import OrganizerOverview from '../components/OrganizerOverview';
 import EthicsValues from '../components/EthicsValues';
 import ComboKeyDatesAndVenue from '../components/ComboKeyDatesAndVenue';
 import WhyAttendNew from '../components/WhyAttendNew';
+import { Helmet } from 'react-helmet-async';
 
 function AboutPage() {
   return (
+    <>
+    <Helmet>
+        <title>About AIMLR 2026 | AI, ML & Robotics Conference Rome</title>
+        
+        <meta 
+          name="description" 
+          content="Learn about AIMLR 2026, the premier International Conference on Artificial Intelligence, Machine Learning & Robotics in Rome. Discover our mission, vision, and global impact." 
+        />
+        
+        <meta 
+          name="keywords" 
+          content="About AIMLR, AI Conference Mission, Robotics Conference Vision, AI Summit Rome, Machine Learning Event Goals, Future of AI" 
+        />
+
+        <link rel="canonical" href="https://roboticsaisummit.com/about" />
+        
+        {/* Robots & Author */}
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <meta name="author" content="AIMLR Organizing Committee" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:title" content="About AIMLR 2026 - The Future of AI & Robotics" />
+        <meta property="og:description" content="Join us in Rome, July 2026. Uniting global minds for intelligent, sustainable innovation in AI and Robotics." />
+        <meta property="og:url" content="https://roboticsaisummit.com/about" />
+        <meta property="og:image" content="https://roboticsaisummit.com/aimllogo.jpg" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About AIMLR 2026 | Rome Conference" />
+        <meta name="twitter:description" content="Discover the mission and vision of the 3rd Global Conference on AI, ML & Robotics." />
+        <meta name="twitter:image" content="https://roboticsaisummit.com/aimllogo.jpg" />
+
+        {/* Organization Schema */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "AIMLR 2026",
+              "url": "https://roboticsaisummit.com",
+              "logo": "https://roboticsaisummit.com/aimllogo.jpg",
+              "description": "The International Conference on Artificial Intelligence, Machine Learning, and Robotics.",
+              "location": {
+                "@type": "Place",
+                "name": "Crowne Plaza Rome - St. Peter's",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Rome",
+                  "addressCountry": "Italy"
+                }
+              }
+            }
+          `}
+        </script>
+      </Helmet>
     <div className="font-sans text-gray-800">
       <Header />
       
      
-      
+  <main>
       {/* --- HERO SECTION --- */}
       <div className="relative bg-indigo-900 text-white overflow-hidden">
       
@@ -120,7 +177,7 @@ function AboutPage() {
             <span className="text-sm font-medium text-indigo-200 uppercase tracking-wide">International Conference 2026</span>
           </div>
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-200 via-white to-indigo-200">
-            The Future of AI & Robotics
+            The Future of AI, ML & Robotics
           </h1>
           <p className="text-xl md:text-2xl text-indigo-100 max-w-2xl mx-auto mb-8 font-light">
             Uniting minds for intelligent, sustainable innovation.
@@ -150,14 +207,33 @@ function AboutPage() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             {/* Image Side */}
-            <div className="lg:w-1/2 relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl opacity-30 blur-lg"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                alt="Futuristic Robot Face" 
-                className="relative shadow-2xl w-full object-cover h-[400px]"
+
+
+            {/* <div className="lg:w-1/2 relative">
+              <video 
+              src="aimlr-2026-video.mp4" 
+              alt="AIMLR 2026 Video" 
+              className="relative shadow-2xl w-full object-cover h-[400px] rounded-2xl"
+              controls
+              autoPlay
+              muted
+              loop
               />
-            </div>
+            </div> */}
+
+            <div className="lg:w-1/2 relative overflow-hidden">
+  <video
+    src="aimlr-2026-video.mp4"
+    className="w-full h-[320px] object-cover aspect-video"
+    autoPlay
+    muted
+    loop
+    playsInline
+    controls
+    poster="/aimlr-2026-video-poster.jpg"
+  />
+</div>
+
             
             {/* Text Side */}
             <div className="lg:w-1/2">
@@ -213,8 +289,12 @@ function AboutPage() {
           </Link>
         </div>
       </div>
+      
+</main>
+
       <EndFooter />
     </div>
+    </>
   );
 }
 

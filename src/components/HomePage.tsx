@@ -262,7 +262,7 @@ function HomePage() {
 
         {/* 5. Twitter Cards */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI & Robotics Conference 2026 | Rome" />
+        <meta name="twitter:title" content="AI, ML & Robotics Conference 2026 | Rome" />
         <meta name="twitter:description" content="The premier global platform for AI, ML, and robotics collaboration. July 2026 in Rome, Italy." />
         <meta name="twitter:image" content="https://roboticsaisummit.com/aimllogo.jpg" />
 

@@ -18,9 +18,9 @@ const CallForPapers: React.FC = () => {
 
       {/* Page Header */}
       <div className="mb-12 border-b-2 border-[#304278] pb-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
+        <h1 className="text-3xl md:text-4xl font-bold text-blue-900">
           CALL FOR PAPERS – AIMLR 2026
-        </h2>
+        </h1>
         <p className="mt-2 text-gray-500 text-lg">
           Submit your research and join the global conversation on AI, ML and Robotics.
         </p>
@@ -33,7 +33,7 @@ const CallForPapers: React.FC = () => {
           <h3 className="text-2xl font-bold text-gray-900">About the Call</h3>
         </div>
         <p className="text-gray-700 leading-relaxed">
-          AIMLR 2026 invites full-length research papers that present original research contributions, innovative methodologies, or significant applications in the fields of Artificial Intelligence, Machine Learning, and Robotics.
+          AI, ML & Robotics Conference 2026 invites full-length research papers that present original research contributions, innovative methodologies, or significant applications in the fields of Artificial Intelligence, Machine Learning, and Robotics.
         </p>
       </div>
 
@@ -125,7 +125,12 @@ const CallForPapers: React.FC = () => {
             ))}
             <li className="flex items-start gap-3">
               <ChevronRight className="w-5 h-5 text-[#272b5f] mt-0.5 shrink-0" />
-              <Link to="/sessions" className="leading-relaxed text-blue-600 hover:text-blue-800 underline">
+              <Link
+                to="/sessions"
+                className="leading-relaxed text-blue-600 hover:text-blue-800 underline"
+                title="View more topics for AIMLR 2026 Conference"
+                aria-label="View more topics for AIMLR 2026 Conference"
+              >
                 more topics
               </Link>
             </li>
@@ -204,11 +209,21 @@ const CallForPapers: React.FC = () => {
       {/* Buttons */}
       <div className="flex flex-col sm:flex-row gap-4 mt-16 border-t pt-8">
         
-        <Link to="/register" className="flex items-center justify-center gap-2 px-8 py-3 bg-[#304278] text-white font-semibold rounded hover:bg-[#304278] transition-colors">
+        <Link
+          to="/register"
+          className="flex items-center justify-center gap-2 px-8 py-3 bg-[#304278] text-white font-semibold rounded hover:bg-[#304278] transition-colors"
+          title="Register for the AIMLR 2026 Conference in Rome"
+          aria-label="Register for the AIMLR 2026 Conference in Rome"
+        >
           Register Now <ArrowRight className="w-4 h-4" />
         </Link>
 
-        <Link to="/AbstractSubmission" className="flex items-center justify-center gap-2 px-8 py-3 border-2 border-gray-200 text-gray-700 font-semibold rounded hover:border-[#0091b5] hover:text-[#0091b5] transition-colors">
+        <Link
+          to="/AbstractSubmission"
+          className="flex items-center justify-center gap-2 px-8 py-3 border-2 border-gray-200 text-gray-700 font-semibold rounded hover:border-[#0091b5] hover:text-[#0091b5] transition-colors"
+          title="Submit your full paper for AIMLR 2026 Conference"
+          aria-label="Submit your full paper for AIMLR 2026 Conference"
+        >
           Submit Full Paper
         </Link>
       </div>

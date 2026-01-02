@@ -80,15 +80,8 @@ function Mixcomponents() {
 
   // ];
 
-  const speakers = [
-  {
-    image: "thomas-gartner.jpeg",
-    alt: "Prof. Thomas Gartner – Keynote Speaker at AIMLR 2026 | Technical University of Vienna, Austria",
-    name: "Prof. Thomas Gartner",
-    title: "Technical University of Vienna, Austria",
-    company: "",
-    type: "Keynote",
-  },
+const speakers = [
+
   {
     image: "yanda-li.jpg",
     alt: "Prof. Yanda Li – Keynote Speaker at AIMLR 2026 | Tsinghua University, China",
@@ -97,70 +90,77 @@ function Mixcomponents() {
     company: "",
     type: "Keynote",
   },
-  {
-    image: "jeannette-bohg.png",
-    alt: "Jeannette Bohg – Speaker at AIMLR 2026 | Stanford University, USA",
-    name: "Jeannette Bohg",
-    title: "Stanford University, USA",
+
+      {
+    image: "Felisa-Baynes-Ross.jpeg",
+    alt: "Prof. Felisa Baynes-Ross – Speaker at AIMLR 2026 | Yale University, USA",
+    name: "Prof. Felisa Baynes-Ross",
+    title: "Yale University, USA",
     company: "",
-    type: "Speaker",
+    type: "Keynote",
   },
   {
+    image: "Athanasios-Paschalis.jpeg",
+    alt: "Prof. Athanasios Paschalis – Speaker at AIMLR 2026 | Imperial College London, UK",
+    name: "Prof. Athanasios Paschalis",
+    title: "Professor, Imperial College London, UK",
+    company: "",
+    type: "Keynote",
+  },
+
+  {
     image: "michael-cafarella.webp",
-    alt: "Michael Cafarella – Speaker at AIMLR 2026 | Massachusetts Institute of Technology, USA",
-    name: "Michael Cafarella",
+    alt: "Dr. Michael Cafarella – Speaker at AIMLR 2026 | Massachusetts Institute of Technology, USA",
+    name: "Dr. Michael Cafarella",
     title: "Massachusetts Institute of Technology, USA",
     company: "",
     type: "Speaker",
   },
+
+
+
+
+  // {
+  //   image: "jan-rosell.jpeg",
+  //   alt: "Dr. Jan Rosell – Speaker at AIMLR 2026 | Shanghai Jiao Tong University, China",
+  //   name: "Dr. f. Jan Rosell",
+  //   title: "Shanghai Jiao Tong University, China",
+  //   company: "",
+  //   type: "Speaker",
+  // },
+
   {
-    image: "katja-hose.jpeg",
-    alt: "Katja Hose – Speaker at AIMLR 2026 | Technical University of Vienna, Austria",
-    name: "Katja Hose",
-    title: "Technical University of Vienna, Austria",
+    image: "liu-yurong.jpeg",
+    alt: "Yurong Liu – Speaker at AIMLR 2026 | Southeast University, China",
+    name: "LIU, Yurong",
+    title: "Southeast University, China",
     company: "",
     type: "Speaker",
   },
+
+
   {
-    image: "petia-radeva.jpeg",
-    alt: "Prof. Petia Radeva – Speaker at AIMLR 2026 | Universitat de Barcelona, Spain",
-    name: "Prof. Petia Radeva",
-    title: "Universitat de Barcelona, Spain",
+    image: "charles-romain.jpeg",
+    alt: "Dr. Charles Romain – Speaker at AIMLR 2026 | Imperial College London, UK",
+    name: "Dr. Charles Romain",
+    title: "Imperial College London, UK",
     company: "",
     type: "Speaker",
   },
+
+
+
   {
-    image: "syed-kamrul-Islam.jpg",
-    alt: "Prof. Syed Kamrul Islam – Speaker at AIMLR 2026 | University of Missouri, USA",
-    name: "Prof. Syed Kamrul Islam",
-    title: "University of Missouri, USA",
+    image: "James-Berger.jpeg",
+    alt: "Dr. James Berger – Keynote Speaker at AIMLR 2026 | Yale University, USA",
+    name: "Dr. James Berger",
+    title: "Yale University, USA",
     company: "",
     type: "Speaker",
   },
-  {
-    image: "alvarado.jpeg",
-    alt: "Noe Alvarado – Speaker at AIMLR 2026 | Universitat Politècnica de Catalunya, Spain",
-    name: "Alvarado, Noe",
-    title: "Universitat Politècnica de Catalunya, Spain",
-    company: "",
-    type: "Speaker",
-  },
-  {
-    image: "jan-rosell.jpeg",
-    alt: "Prof. Jan Rosell – Speaker at AIMLR 2026 | Shanghai Jiao Tong University, China",
-    name: "Prof. Jan Rosell",
-    title: "Shanghai Jiao Tong University, China",
-    company: "",
-    type: "Speaker",
-  },
-  {
-    image: "rohit-chadha.jpeg",
-    alt: "Prof. Rohit Chadha – Speaker at AIMLR 2026 | University of Missouri, USA",
-    name: "Prof. Rohit Chadha",
-    title: "University of Missouri, USA",
-    company: "",
-    type: "Speaker",
-  },
+
+
+
 ];
 
 

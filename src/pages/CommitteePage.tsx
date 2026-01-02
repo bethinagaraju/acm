@@ -1015,21 +1015,12 @@ import { Link } from "react-router-dom";
 // ---------------- DATA ----------------
 
 const committeeMembers = [
-  { name: "Prof. Thomas Gartner", affiliation: "Technical University of Vienna, Austria" },
-
-  { name: "Prof. Petia Radeva", affiliation: "Universitat de Barcelona, Spain" },
-
-  { name: "Prof. Syed Kamrul Islam", affiliation: "University of Missouri, USA" },
-
-
-
-  { name: "Prof. Jan Rosell", affiliation: "Shanghai Jiao Tong University, China" },
-
-  { name: "Prof Rohit Chadha", affiliation: "University of Missouri, USA" },
-  { name: "Prof. CHEN, Peng", affiliation: "Southeast University, China" },
-
-
-
+  { name: "Prof. Yanda Li", affiliation: "Tsinghua University, China" },
+  { name: "Prof. Felisa Baynes-Ross", affiliation: "Yale University, USA" },
+  { name: "Prof. Athanasios Paschalis", affiliation: "Imperial College London, UK" },
+  { name: "Dr. Michael Cafarella", affiliation: "Massachusetts Institute of Technology, USA" },
+  { name: "Dr. f. Jan Rosell", affiliation: "Shanghai Jiao Tong University, China" },
+  { name: "LIU, Yurong", affiliation: "Southeast University, China" },
 ];
 
 // ---------------- PAGE ----------------
